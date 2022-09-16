@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon (1).ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Analisador de números</h1>
+    </header>
+    <section>
+        <div>
+            <div>
+                <label for="inum">Número (entre 1 e 100): </label>
+                <input type="number" name="num" id="inum">
+                <input id="botao" type="button" value="Adicionar" onclick="adicionar()">
+            </div>
+        </div>
+        <div id="sel">
+            <select name="adicionar" id="seladd" size="10">
+                <option value="">Digite os números para adicioná-los!</option>
+            </select>
+            <p><input type="button" value="Finalizar!" onclick="finalizar()"></p>
+        </div>
+        <div id="resultado">
+
+        </div>
+    </section>
+    <footer>
+        <p>Desenvolvido por <a id="perfil" href="https://github.com/lucasbiz" target="_blank" rel="external">@Lucas_Biz_Teixeira</a> seguindo as aulas do <a href="https://www.cursoemvideo.com/">@cursoemvideo</a></p>
+        <p id="redes"><a href="https://www.linkedin.com/in/lucas-biz-teixeira" target="_blank" rel="external"><img src="imagens/linkedin.png" alt="Simbolo linkedin"></a><a href="https://twitter.com/lucasBizT" target="_blank" rel="external"><img src="imagens/twitter.png" alt="Símbolo do Twitter"></a></p>
+
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
