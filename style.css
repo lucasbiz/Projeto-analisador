@@ -79,3 +79,15 @@ div#resultado > p {
     margin: 0px;
     padding-bottom: 20px;
 }
+
+p>input{
+    margin: 5px;
+}
+
+div#sel{
+    max-width: 240px;
+}
+
+select{
+    width: 100%;
+}

@@ -3,7 +3,6 @@ let res = document.getElementById('resultado')
 let lista = []
 let selec = document.getElementById('seladd')
 
-
 function adicionar(){
     let numero = Number(num.value)
     if(num.value.length == 0){
@@ -23,6 +22,12 @@ function adicionar(){
     }
     num.value = ''
     num.focus()
+}
+
+function limpar(){
+    res.innerHTML = ''
+    selec.innerHTML = ''
+    lista = []
 }
 
 function finalizar(){
@@ -67,6 +72,7 @@ function finalizar(){
         let thanks = document.createElement('p')
         thanks.textContent = `Obrigado por utilizar! \u{1F33B}`
         res.appendChild(thanks)
+
 
     }
 }
