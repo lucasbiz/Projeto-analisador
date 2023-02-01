@@ -37,47 +37,32 @@ function finalizar(){
     if (lista.length == 0){alert('[ERRO] É necessário adicionar ao menos um número!')
     
     }else {
-        let ordem = lista.sort()
+        
+        lista.sort()
         let primeiro = lista.at(0)
 
-        let tam = Number(lista.length)
-        let itens = document.createElement('p')
-        let plural = 'números'
-        if (tam == 1) {plural = 'número'}
-        itens.textContent = `Você inseriu ${tam} ${plural}!`
-        res.appendChild(itens)
-
-
-        let maior = document.createElement('p')
-        let ultimo = lista.at(tam - 1)
-        maior.textContent = `O maior valor inserido foi ${ultimo}`
-        res.appendChild(maior)
-
-
-        let menor = document.createElement('p')
-        menor.textContent = `O menor valor inserido foi ${primeiro}`
-        res.appendChild(menor)
-
-
-        let somatorio = document.createElement('p')
-        let soma = 0
-        for (c = 0; c < tam; c++){
-                soma += lista[c]
+        let resultados = (content) => {
+            content.forEach(el => {
+                let item = document.createElement('p')
+                item.textContent = el
+                res.appendChild(item)
+            })
         }
-        somatorio.textContent = `O somatório de todos os itens é ${soma}`
-        res.appendChild(somatorio)
 
+        let tam = Number(lista.length)
 
-        let media = document.createElement('p')
+        let plural = 'números'
+
+        if (tam == 1) {plural = 'número'}
+
+        let ultimo = lista.at(tam - 1)
+
+        let soma = 0
+        lista.forEach(elemento => soma += elemento)
+
         let calc = soma/tam
-        media.textContent = `A média dos valores inseridos é ${calc}`
-        res.appendChild(media)
 
+        resultados([`Você inseriu ${tam} ${plural}!`,`O maior valor inserido foi ${ultimo}`,`O menor valor inserido foi ${primeiro}`,`O somatório de todos os itens é ${soma}`,`A média dos valores inseridos é ${calc}`,`Obrigado por utilizar! \u{1F33B}`])
         
-        let thanks = document.createElement('p')
-        thanks.textContent = `Obrigado por utilizar! \u{1F33B}`
-        res.appendChild(thanks)
-
-
     }
 }
