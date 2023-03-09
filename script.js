@@ -27,6 +27,7 @@ function adicionar(){
 function limpar(){
     res.innerHTML = ''
     selec.innerHTML = ''
+    num.focus()
     lista = []
 }
 

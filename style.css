@@ -20,9 +20,10 @@ section{
 
 input#botao{
     color: black;
-    background-color: rgb(202, 202, 202);
+    background-color: white;
     cursor: pointer;
     transition: 0.3s;
+    padding: 3px;
 }
 
 input#botao:hover{
@@ -91,3 +92,4 @@ div#sel{
 select{
     width: 100%;
 }
+
